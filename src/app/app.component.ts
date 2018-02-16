@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  todayBirthDay = ['Arjitn', 'Isvan', 'Deepika'];
+  todayBirthDay$ = new BehaviorSubject(['Arjitn', 'Isvan', 'Deepika']);
+
+  addNames(dudes) {
+    // this.todayBirthDay.push(dudes);
+    this.todayBirthDay$.next(dudes);
+    this.todayBirthDay.push(dudes);
+  }
 }
