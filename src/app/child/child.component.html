@@ -1,0 +1,30 @@
+Reference: changeDetection: ChangeDetectionStrategy.Default
+<ul>
+  <li *ngFor="let item of data">{{ item }}</li>
+</ul>
+
+<hr>
+
+
+Observalbe: this.cd.markForCheck();
+<ul>
+  <li *ngFor="let item of dataFromObs">{{ item }}</li>
+</ul>
+
+
+
+<hr>
+
+
+New Obj: changeDetection: ChangeDetectionStrategy.OnPush
+<button (click)="check()">Check</button>
+<ul>
+  <li *ngFor="let item of newData">{{ item }}</li>
+</ul>
+
+
+<hr>
+
+
+Check for changes:  this.cd.detectChanges();
+<button (click)="checkForChanges()">Check for changes</button>
