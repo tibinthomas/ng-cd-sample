@@ -1,6 +1,5 @@
 import { Component, OnInit, Input, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import { setTimeout } from 'timers';
 
 @Component({
   selector: 'app-child',
